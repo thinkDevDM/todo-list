@@ -1,0 +1,149 @@
+body {
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+	/*background-color: #333;*/
+	color: #333;
+}
+
+#page-wrap {
+	width: 60%;
+	margin: 20px auto;
+	background-color: #3498db;
+	border-radius: 15px;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+#todo-input {
+	text-align: center;
+	border-bottom: 1px solid #333;
+	padding-bottom: 20px;
+}
+
+input#new-todo {
+	width: 600px;
+	font-size: 1.5em;
+	padding: 5px 0 5px 10px;
+	border-radius: 5px;
+}
+
+select#priorities {
+	width: 100px;
+	height: 30px;
+	margin-left: 15px;
+	padding-left: 5px;
+	font-size: 1.15em;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+#todo-count {
+	font-size: 1.15em;
+	color: #fff;
+	display: inline-block;
+}
+
+span#count {
+	color: #2ecc71;
+	font-size: 1.25em;
+	background-color: #333;
+	padding: 0 5px;
+}
+
+span#info {
+	margin-left: 20px;
+}
+
+#todo-list {
+	min-height: 400px;
+	font-weight: 300;
+}
+
+#todo-list li {
+	list-style: none;
+	margin-top: 20px;
+	cursor: default;
+}
+
+#todo-list li {
+	border-bottom: 1px solid #888;
+	padding-bottom: 10px;
+}
+
+#todo-list li:last-child {
+	border-bottom: none;
+}
+
+#todo-list li .edit {
+	display: none;
+}
+
+#todo-list li.editing .view {
+	display: none;
+}
+
+#todo-list li.editing .edit {
+	display: block;
+	font-size: 1.5em;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	padding: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.list-look {
+	font-size: 1.35em;
+	color: #fff;
+}
+
+.priority {
+	margin-left: 10px;
+	font-weight: bold;
+	color: #2ecc71;
+	text-shadow: -1px 0 #333, 0 1px #333, 1px 0 #333, 0 -1px #333;;
+}
+
+.priority.medium {
+	color: #f1c40f;
+}
+
+.priority.high {
+	color: #c0392b;
+}
+
+#edit-btn {
+	margin-left: 10px;
+	text-decoration: underline;
+	color: #3d566e;
+}
+
+#edit-btn:hover {
+	cursor: pointer;
+	color: #2c3e50;
+}
+
+.delete-icon {
+	display: inline-block;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+footer {
+	border-top: 1px solid #333;
+	text-align: center;
+	margin-top: 50px;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}

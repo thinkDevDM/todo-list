@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>AngularJS Todo List</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+</head>
+
+<body ng-controller="TodoCtrl">
+	<div id="page-wrap">
+
+		<header>
+			<h1>Make My Day - Todo List</h1>
+		</header>
+
+		<div id="todo-input">
+			<input type="text" id="new-todo" placeholder="What's on the agenda?" ng-model="todoText" ng-keyup="addTodo()"/>
+			<select id="priorities" ng-model="priority">
+				<option value="low">Low</option>
+				<option value="medium">Medium</option>
+				<option value="high">High</option>
+			</select>
+		</div>
+
+		<div id="todo-list">
+			<p id="todo-count">You have <span id="count">{{todos.length}}</span> assignment(s) to complete.</p>
+			<span id="info"><small>(Double click to edit.)</small></span>
+
+			<ul>
+				<li ng-repeat="todo in todos track by $index" ng-dblclick="toggleEdit()">
+					<div class="view" ng-keyup="editTodo()">
+						<img class="delete-icon" ng-click="deleteTodo($index)" src="img/delete.ico" width="20" height="20" alt="delete icon" />
+						<span class="list-look">{{todo.text}}</span>
+						<span class="priority {{todo.priority}}">{{todo.priority}}</span>
+					</div>
+					<input class="edit" type="text" ng-model="todo.text" ng-keyup="editOnEnter(todo)" />
+				</li>
+			</ul>
+		</div><!-- /#todo-list -->
+
+		<footer>
+			<p>An AngularJS  project by <a href="https://github.com/thinkDevDM?tab=repositories" target="_blank">Drew Mery</a> - 2015</p>
+		</footer>
+
+	</div><!-- /#page-wrap -->
+
+	<!-- custom code script -->
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
