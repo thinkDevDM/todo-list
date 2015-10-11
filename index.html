@@ -8,13 +8,19 @@
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 
+	<script>
+		// Header Fade-in on Page Load
+		$(document).ready(function() {
+			$('.hidden').fadeIn(4000).removeClass('hidden');
+		});
+	</script>
 </head>
 
 <body ng-controller="TodoCtrl">
 	<div id="page-wrap">
 
 		<header>
-			<h1>Make My Day - Todo List</h1>
+			<h1 class="hidden">Make My Day - Todo List</h1>
 		</header>
 
 		<div id="todo-input">

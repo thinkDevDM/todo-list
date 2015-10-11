@@ -8,7 +8,7 @@ body {
 #page-wrap {
 	width: 60%;
 	margin: 20px auto;
-	background-color: #3498db;
+	background-color: #bdc3c7;
 	border-radius: 15px;
 	padding: 20px;
 }
@@ -16,6 +16,10 @@ body {
 h1 {
 	text-align: center;
 	font-size: 2.5em;
+}
+
+h1.hidden {
+	display: none;
 }
 
 #todo-input {
@@ -45,7 +49,7 @@ select#priorities {
 
 #todo-count {
 	font-size: 1.15em;
-	color: #fff;
+	/*color: #fff;*/
 	display: inline-block;
 }
 
@@ -69,9 +73,6 @@ span#info {
 	list-style: none;
 	margin-top: 20px;
 	cursor: default;
-}
-
-#todo-list li {
 	border-bottom: 1px solid #888;
 	padding-bottom: 10px;
 }
@@ -102,7 +103,7 @@ span#info {
 
 .list-look {
 	font-size: 1.35em;
-	color: #fff;
+	/*color: #fff;*/
 }
 
 .priority {
